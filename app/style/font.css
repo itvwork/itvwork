@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'icon';
+  /* project id 260612 */
+  src: url('//at.alicdn.com/t/font_260612_otf0rr25yd5cdi.eot');
+  src: url('//at.alicdn.com/t/font_260612_otf0rr25yd5cdi.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_260612_otf0rr25yd5cdi.woff') format('woff'), url('//at.alicdn.com/t/font_260612_otf0rr25yd5cdi.ttf') format('truetype'), url('//at.alicdn.com/t/font_260612_otf0rr25yd5cdi.svg#icon') format('svg');
+}
+i,
+a {
+  font-family: "icon" !important;
+  font-size: 0.16rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.item-menu > a i:before {
+  position: absolute;
+  left: 0.08rem;
+  top: 0.01rem;
+}
+.icon-home:before {
+  content: '\e61d';
+}
+.router-link-exact-active .icon-home:before,
+.active .icon-home:before {
+  content: '\e61e';
+}
+.icon-brand:before {
+  content: '\e623';
+  position: absolute;
+  left: 0.8rem;
+}
+.router-link-exact-active .icon-brand:before {
+  content: '\e624';
+}
+.icon-search:before {
+  content: '\e613';
+}
+.icon-checkbox:before {
+  content: '\e720';
+  font-size: .19rem;
+}
+.active .icon-checkbox:before {
+  content: '\e721';
+}
+.icon-brand-checkbox:before {
+  content: '\e62c';
+  font-size: .29rem;
+}
+.icon-view:before {
+  content: '\e639';
+  line-height: .37rem;
+  font-size: .18rem;
+}
+.icon-del:before {
+  content: '\e664';
+  line-height: .36rem;
+}
+.icon-edit:before {
+  content: '\e629';
+}
+.icon-back:before {
+  content: '\e8f3';
+}
+.clear-word:before {
+  content: '\e621';
+}
+.icon-view-pwd:before {
+  content: '\e614';
+}
+.icon-hide-pwd:before {
+  content: '\e616';
+}
+.icon-close:before {
+  content: '\e643';
+}
+.icon-pic:before {
+  content: '\e641';
+}
+.icon-check:before {
+  content: '\e72f';
+}
+.icon-check.active:before {
+  content: '\e730';
+}
+.icon-cover:before {
+  content: '\e66a';
+}
+.icon-plus:before {
+  content: '\e62f';
+}
+.crumbs a:after {
+  content: '\e8f4';
+}
+.icon-nav:before {
+  content: '\e62a';
+}
+.icon-user:before {
+  content: '\e770';
+}
+.icon-close:before {
+  content: '\e643';
+}
+.icon-code:before {
+  content: '\e603';
+}
+.icon-add:before {
+  content: '\e637';
+}
+.icon-select:before {
+  content: '\e731';
+}
+.icon-selected:before {
+  content: '\e730';
+}

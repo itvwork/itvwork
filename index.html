@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var as={
+        data:"add",
+        show:'id'
+    }
+    
+    let lstr="";
+
+    function argUrl(obj) {
+        var result="";
+        function argFormat(obj,name) {
+            if(typeof obj==="object"){
+                for(i in obj){
+                    if(typeof obj[i]==="object"){
+                        name?argFormat(obj[i],name+'['+i+']'):argFormat(obj[i],i);
+                    }else{
+
+
+                        if(name){
+                            result+=name+"["+i+"]"+'='+encodeURIComponent(obj[i])+'&';
+                        }else{
+                            result+=i+'='+encodeURIComponent(obj[i]);
+
+
+                        }
+                    }
+                }
+            }else{
+                result+=obj;
+
+            };
+
+    }
+        argFormat(obj);
+        return result;
+    }
+  console.log(argUrl(as));
+
+
+</script>
+</body>
+</html>

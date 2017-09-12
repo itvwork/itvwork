@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'ui-icon';  /* project id 325508 */
+  src: url('//at.alicdn.com/t/font_692uexrrz4w5qaor.eot');
+  src: url('//at.alicdn.com/t/font_692uexrrz4w5qaor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_692uexrrz4w5qaor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_692uexrrz4w5qaor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_692uexrrz4w5qaor.svg#ui-icon') format('svg');
+}
+@wranColor:#ffa100;
+.ui-icon {
+  font-family:"ui-icon" !important;
+  font-size:.16rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ui-wrap {
+  z-index: 1000;
+    padding: 0; margin: 0;
+    font-size: 0.12rem;
+    width: 3rem;
+    overflow: hidden;
+    .border-radius(0,0.08rem);
+    background-color: #fff;
+    height: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-left: .6rem;
+    .box-shadow(0px,0px,0.1rem);
+    *{padding: 0; margin: 0;}
+    .ui-outdoor{ position: relative;}
+    .ui-top{ height: 1.44rem;}
+    .ui-icon-title{ text-align: center; padding-top: .24rem; font-size: .48rem; color: #fff;}
+    h2{text-align: center;color:@white;}
+    .ui-words{ text-align: center;color:@white;}
+
+}
+
+.ui-btn-group{ text-align: center; padding-top: .12rem;
+  button{ background:  @wranColor; border: none;  color: @white; padding: 0.06rem .31rem; .border-radius(0,.24rem)}
+  .btn-sure{  margin-right: .36rem;}
+  .btn-cancel { background-color: @gray*1.2; color: @white;}
+}
+.warn{
+    .ui-top{
+      background-color: @wranColor;
+    }
+    .ui-icon-close{ position: absolute; right: 5px; top: 3px; color: @white; cursor: pointer; font-size: .12rem;}
+    .ui-icon-close:before{ content: '\e609';}
+      .ui-icon-title:before{ content: '\e62e';}
+}
+
+.success{
+  .ui-top{
+    background-color: @mainColor;
+  }
+  h2{text-align: center;color:@white}
+  .ui-icon-close{ position: absolute; right: 5px; top: 3px; color: @white; cursor: pointer; font-size: .12rem;}
+  .ui-icon-close:before{ content: '\e609'; }
+  .ui-icon-title:before{ content: '\e629'; color:@white;}
+
+  .ui-btn-group{
+    .btn-sure{  background-color: @mainColor;}
+    .btn-cancel { background-color: @color4; color: @white;}
+  }
+}
+
+
+
+.bg { background-color: rgba(0,0,0,0.4); position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px;
+z-index: 999;
+}
+
+.vue-loading{
+  width: 100px; position: fixed; top: 50%; left: 50%;
+
+  .loading-img{ margin: auto; width: 40px; height: 40px; background: url(file/load.png); background-size: 100%;animation: loading 1s linear infinite;}
+  p{ text-align: center;}
+}
+
+

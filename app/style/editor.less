@@ -1,0 +1,608 @@
+@font-face {
+  font-family: 'editor';  /* project id 329408 */
+  src: url('//at.alicdn.com/t/font_lc8xoh9jgx9cz0k9.eot');
+  src: url('//at.alicdn.com/t/font_lc8xoh9jgx9cz0k9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_lc8xoh9jgx9cz0k9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_lc8xoh9jgx9cz0k9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_lc8xoh9jgx9cz0k9.svg#editor') format('svg');
+}
+// .w-e-menu { font-size: 1.6rem;}
+// .w-e-text { background-color: @white}
+
+.vue-editor-wrap .icon {
+    font-family: "editor" !important;
+    font-size: 0.15rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: @gray/1.6;
+    line-height: 0.3rem;
+
+}
+.vue-editor-nav-item .icon-link{ display: block; width: 100%; height: 100%;}
+.icon-title:before {
+    content: '\e72c';
+}
+
+.icon-blod:before {
+    content: '\e718';
+}
+
+.icon-itatic:before {
+    content: '\e726';
+}
+
+.icon-underline:before {
+    content: '\e725';
+}
+
+.icon-centerline:before {
+    content: '\e72a';
+}
+
+.icon-sup:before {
+    content: '\e730';
+    font-size: 0.14rem;
+}
+
+.icon-sub:before {
+    content: '\e731';
+    font-size: 0.14rem;
+}
+
+.icon-color:before {
+    content: '\e727';
+}
+
+.icon-bgcolor:before {
+    content: '\e723';
+}
+
+.icon-has-list:before {
+    content: '\e728';
+}
+
+.icon-none-list:before {
+    content: '\e724';
+}
+
+.icon-link:before {
+    content: '\e717';
+}
+
+.icon-del-link:before {
+    content: '\e732';
+}
+
+.icon-align:before {
+    content: '\e71a';
+}
+
+.icon-left-align:before {
+    content: '\e72d';
+}
+
+.icon-center-align:before {
+    content: '\e71c';
+}
+
+.icon-right-align:before {
+    content: '\e729';
+}
+
+.icon-jusity-align:before {
+    content: '\e71a';
+}
+
+.icon-face:before {
+    content: '\e734';
+}
+
+.icon-pic-editor:before{
+  content: '\e722';
+}
+.icon-quote:before{ content: '\e733'}
+.vue-editor-wrap {
+  .content{
+    ol{
+
+      li{
+        list-style: decimal-leading-zero inside;
+      }
+    }
+    ul{
+
+      li{  list-style: disc inside;}
+
+    }
+
+  }
+
+  blockquote{ padding: .1rem; margin: 0;}
+    border: @gray solid 1px;
+    background-color: @white;
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
+
+    b {
+        font-weight: bold;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    .h1,
+    h1,
+    h1 * {
+        font-size: 0.36rem;
+    }
+
+    .h2,
+    h2,
+    h2 * {
+        font-size: 0.30rem;
+    }
+
+    .h3,
+    h3,
+    h3 * {
+        font-size: 0.26rem;
+    }
+
+    .h4,
+    h4,
+    h4 * {
+        font-size: 0.20rem;
+    }
+
+    .h5,
+    h5,
+    h5 * {
+        font-size: 0.16rem;
+    }
+
+    .h6,
+    h6,
+    h6 * {
+        font-size: 0.14rem;
+    }
+
+    .vue-editor-nav {
+        font-size: 0;
+        height: 0.3rem;
+        border-bottom: @gray solid 1px;
+        background-color: @bodyColor;
+
+        .vue-editor-nav-item {
+            width: 0.4rem;
+            height: 0.3rem;
+            position: relative;
+            line-height: 0.26rem;
+            display: inline-block;
+            border-right: @gray solid 1px;
+            text-align: center;
+            button{ width: 2rem; height: .3rem; .border-radius(0,0.06rem)}
+        }
+        .white-block{ position: absolute; width: 0.4rem; background-color: @bodyColor; height:.1rem;top: -1px;}
+        .link-editor {
+            width: 2.8rem;
+            height: 1.2rem;
+            position: absolute;
+            left: -1px;
+            top: 30px;
+            z-index: 10;
+            border: @gray solid 1px;
+            font-size: 0.14rem;
+            background-color: @bodyColor;
+
+            li { margin: .1rem .1rem;
+              span{padding: 0rem .1rem;}
+            }
+            input{ border: none;border-bottom: @gray solid 1px; font-size: .14rem;
+               width: 2rem; box-sizing: border-box;
+               padding: .05rem .1rem;
+
+            }
+
+        }
+
+        .vue-editor-nav-item:hover {
+            background-color: @white;
+            cursor: pointer;
+            .white-block{ background-color: @white; }
+            .link-editor {
+
+                background-color: @white;
+
+
+
+            }
+
+
+        }
+
+
+
+    }
+
+    .vue-word-title {
+        position: absolute;
+        width: 0.8rem;
+        top: 0.26rem;
+        font-size: 0.12rem;
+        z-index: 1;
+        background-color: @white;
+        border: @gray solid 1px;
+
+        li {
+            line-height: 0.45rem;
+
+            &:hover {
+                background-color: @gray*1.4;
+            }
+        }
+    }
+
+    .content {
+        padding: 0.12rem;
+        box-sizing: border-box;
+    }
+}
+
+.algin-box {
+    position: absolute;
+    border: @gray solid 1px;
+    top: 0.3rem;
+    left: -.01rem;
+
+    i {
+        display: block;
+        width: 0.4rem;
+
+        &:hover {
+            background-color: @gray*1.3;
+        }
+    }
+}
+
+.sel-color {
+    position: absolute;
+    top: 0.3rem;
+    background-color: @white;
+    border: @gray solid 1px;
+    width: 2.8rem;
+    height: 2.8rem;
+    left: -1px;
+
+    .word-color {
+        font-size: 0rem;
+    }
+
+    .sel-color-title {
+        font-size: 0.14rem;
+        color: @gray/2;
+    }
+
+    .main-color-title {
+        display: inline-block;
+        width: 0.2rem;
+        height: 0.2rem;
+        border: @gray solid 1px;
+        margin: 0.02rem;
+    }
+
+    .icon-black {
+        background-color: #000;
+    }
+
+    .icon-cream {
+        background-color: #eeece1;
+    }
+
+    .icon-black-blue {
+        background-color: #1f497d;
+    }
+
+    .icon-blue {
+        background-color: #4f81bd;
+    }
+
+    .icon-red {
+        background-color: #c0504d;
+    }
+
+    .icon-green {
+        background-color: #9bbb59;
+    }
+
+    .icon-violet {
+        background-color: #8064a2;
+    }
+
+    .icon-cyan {
+        background-color: #4bacc6;
+    }
+
+    .icon-orange {
+        background-color: #f79646;
+    }
+
+    .vice-color {
+        height: 1.1rem;
+
+        .main-color-title {
+            height: 1rem;
+
+            i {
+                height: 0.2rem;
+                display: block;
+            }
+        }
+    }
+
+    .gray1 {
+        background-color: #f2f2f2;
+    }
+
+    .gray2 {
+        background-color: #d8d8d8;
+    }
+
+    .gray3 {
+        background-color: #bfbfbf;
+    }
+
+    .gray4 {
+        background-color: #a5a5a5;
+    }
+
+    .gray5 {
+        background-color: #7f7f7f;
+    }
+
+    .black1 {
+        background-color: #7f7f7f;
+    }
+
+    .black2 {
+        background-color: #595959;
+    }
+
+    .black3 {
+        background-color: #3f3f3f;
+    }
+
+    .black4 {
+        background-color: #262626;
+    }
+
+    .black5 {
+        background-color: #0c0c0c;
+    }
+
+    .cream1 {
+        background-color: #ddd9c3;
+    }
+
+    .cream2 {
+        background-color: #c4bd97;
+    }
+
+    .cream3 {
+        background-color: #938953;
+    }
+
+    .cream4 {
+        background-color: #494429;
+    }
+
+    .cream5 {
+        background-color: #1d1b10;
+    }
+
+    .black-blue1 {
+        background-color: #c6d9f0;
+    }
+
+    .black-blue2 {
+        background-color: #8db3e2;
+    }
+
+    .black-blue3 {
+        background-color: #548dd4;
+    }
+
+    .black-blue4 {
+        background-color: #17365d;
+    }
+
+    .black-blue5 {
+        background-color: #0f243e;
+    }
+
+    .blue1 {
+        background-color: #dbe5f1;
+    }
+
+    .blue2 {
+        background-color: #b8cce4;
+    }
+
+    .blue3 {
+        background-color: #95b3d7;
+    }
+
+    .blue4 {
+        background-color: #366092;
+    }
+
+    .blue5 {
+        background-color: #244061;
+    }
+
+    .red1 {
+        background-color: #f2dcdb;
+    }
+
+    .red2 {
+        background-color: #e5b9b7;
+    }
+
+    .red3 {
+        background-color: #d99694;
+    }
+
+    .red4 {
+        background-color: #953734;
+    }
+
+    .red5 {
+        background-color: #632423;
+    }
+
+    .green1 {
+        background-color: #ebf1dd;
+    }
+
+    .green2 {
+        background-color: #d7e3bc;
+    }
+
+    .green3 {
+        background-color: #c3d69b;
+    }
+
+    .green4 {
+        background-color: #76923c;
+    }
+
+    .green5 {
+        background-color: #4f6128;
+    }
+
+    .violet1 {
+        background-color: #e5e0ec;
+    }
+
+    .violet2 {
+        background-color: #ccc1d9;
+    }
+
+    .violet3 {
+        background-color: #b2a2c7;
+    }
+
+    .violet4 {
+        background-color: #5f497a;
+    }
+
+    .violet5 {
+        background-color: #3f3151;
+    }
+
+    .cyan1 {
+        background-color: #dbeef3;
+    }
+
+    .cyan2 {
+        background-color: #b7dde8;
+    }
+
+    .cyan3 {
+        background-color: #92cddc;
+    }
+
+    .cyan4 {
+        background-color: #31859b;
+    }
+
+    .cyan5 {
+        background-color: #205867;
+    }
+
+    .orange1 {
+        background-color: #fdeada;
+    }
+
+    .orange2 {
+        background-color: #fbd5b5;
+    }
+
+    .orange3 {
+        background-color: #fac08f;
+    }
+
+    .orange4 {
+        background-color: #e36c09;
+    }
+
+    .orange5 {
+        background-color: #974806;
+    }
+
+    .a1 {
+        background-color: #c00000;
+    }
+
+    .a2 {
+        background-color: #ff0000;
+    }
+
+    .a3 {
+        background-color: #ffc000;
+    }
+
+    .a4 {
+        background-color: #ffff00;
+    }
+
+    .a5 {
+        background-color: #92d050;
+    }
+
+    .a6 {
+        background-color: #00b050;
+    }
+
+    .a7 {
+        background-color: #00b0f0;
+    }
+
+    .a8 {
+        background-color: #0070c0;
+    }
+
+    .a9 {
+        background-color: #002060;
+    }
+
+    .a10 {
+        background-color: #7030a0;
+    }
+
+}
+.link-btn-group {
+  span{
+      font-size: .12rem;
+  }
+  span:nth-child(2){
+  color: @mainColor;
+    &:hover{ color: @mainColor/1.1;}
+  }
+}
